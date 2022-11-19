@@ -1,4 +1,5 @@
 version: "3.3"
 services:
   infra:
+    restart: unless-stopped
     image: smallstep/step-ca

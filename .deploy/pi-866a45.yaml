@@ -4,4 +4,4 @@ services:
     volumes:
       - "/fs/d1/services/ca/infra-ca:/home/step"
     ports:
-      - "192.168.100.9:443:9000/tcp"
+      - "192.168.100.9:443:443/tcp"
