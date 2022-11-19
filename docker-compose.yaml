@@ -7,8 +7,20 @@ services:
     - "./prov/templates:/home/step/templates:ro"
     healthcheck:
       interval: 5s
+  container-ra:
+    restart: unless-stopped
+    image: smallstep/step-ca
+    volumes:
+    - "./prov/templates:/home/step/templates:ro"
+    healthcheck:
+      interval: 5s
+    networks:
+      - provisioning
   infra:
     restart: unless-stopped
     image: smallstep/step-ca
     healthcheck:
       interval: 5s
+networks:
+  provisioning:
+    name: provisioning

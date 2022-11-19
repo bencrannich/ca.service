@@ -10,3 +10,6 @@ services:
       - "/fs/d1/services/ca/infra-ca:/home/step"
     ports:
       - "192.168.100.9:9001:9001/tcp"
+  container-ra:
+    volumes:
+      - "/fs/d1/services/ca/containers:/home/step"
