@@ -1,7 +1,12 @@
 version: '3.3'
 services:
+  prov:
+    volumes:
+      - "/fs/d1/services/ca/prov-ca:/home/step"
+    ports:
+      - "192.168.100.9:443:443/tcp"
   infra:
     volumes:
       - "/fs/d1/services/ca/infra-ca:/home/step"
     ports:
-      - "192.168.100.9:443:443/tcp"
+      - "192.168.100.9:9001:9001/tcp"
