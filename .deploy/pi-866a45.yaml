@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  infra:
+    volumes:
+      - "/fs/d1/services/ca/infra-ca:/home/step"
+    ports:
+      - "192.168.100.9:443:9000/tcp"

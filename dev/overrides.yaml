@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  infra:
+    volumes:
+      - "./dev/data/infra:/home/step"
+    ports:
+      - "127.0.0.1:9000:9000/tcp"
+    environment:
+      DOCKER_STEPCA_INIT_NAME: Example Enterprises Infrastructure
+      DOCKER_STEPCA_INIT_DNS_NAMES: infra-ca
+      DOCKER_STEPCA_INIT_PROVISIONER_NAME: bootstrap
